@@ -18,7 +18,7 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next){
                 //must use id.equals() because foundCampground.author is a mongoDB object
                 //meaning that req.user._id is a string but foundCampground.author is not
                 //even though they both output as strings
-                if(foundCampground.author.id.equals(req.user._id)){
+                if(foundCampground.author.id.equals(req.user._id) || req.user.isAdmin){
                     //pass that campground into the edit form
                     next();
                 } else {
@@ -48,7 +48,7 @@ middlewareObj.checkCommentOwnership = function(req, res, next) {
                 //must use id.equals() because foundCampground.author is a mongoDB object
                 //meaning that req.user._id is a string but foundCampground.author is not
                 //even though they both output as strings
-                if(foundComment.author.id.equals(req.user._id)){
+                if(foundComment.author.id.equals(req.user._id) || req.user.isAdmin){
                     //pass that campground into the edit form
                     next();
                 } else {

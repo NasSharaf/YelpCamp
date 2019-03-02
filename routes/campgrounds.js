@@ -44,7 +44,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
         } else {
             //redirect back to campgrounds page
             req.flash("success", "Successfully created a new campground!");
-            res.redirect("/");
+            res.redirect("/campgrounds/");
         }
     })
     //.push()
