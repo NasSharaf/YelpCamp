@@ -18,9 +18,9 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes         = require("./routes/index")
 
 //connect mongoose
-//mongoose.connect("mongodb://localhost/yelp_camp_v9");
-//connec to mongoLab
-mongoose.connect("mongodb+srv://NasSharaf:nsrsharaf7@cluster0-ubrdq.mongodb.net/test?retryWrites=true");
+mongoose.connect(process.env.DATABASEURL);
+//connect to mongoLab
+//mongoose.connect("mongodb+srv://NasSharaf:nsrsharaf7@cluster0-ubrdq.mongodb.net/test?retryWrites=true");
 
 //Connects to ejs
 app.set("view engine", "ejs");
