@@ -19,8 +19,6 @@ var commentRoutes       = require("./routes/comments"),
 
 //connect mongoose
 mongoose.connect(process.env.DATABASEURL);
-//connect to mongoLab
-//mongoose.connect("mongodb+srv://NasSharaf:nsrsharaf7@cluster0-ubrdq.mongodb.net/test?retryWrites=true");
 
 //Connects to ejs
 app.set("view engine", "ejs");
