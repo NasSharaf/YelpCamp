@@ -20,7 +20,7 @@ var commentRoutes       = require("./routes/comments"),
 //connect mongoose
 //mongoose.connect("mongodb://localhost/yelp_camp_v9");
 //connec to mongoLab
-mongoose.connect("mongodb+srv://NasSharaf:nsrsharaf7@cluster0-ubrdq.mongodb.net/yelp_camp_v11?retryWrites=true");
+mongoose.connect("mongodb+srv://NasSharaf:nsrsharaf7@cluster0-ubrdq.mongodb.net/test?retryWrites=true");
 
 //Connects to ejs
 app.set("view engine", "ejs");
